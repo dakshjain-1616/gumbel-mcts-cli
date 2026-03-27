@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" width="860" height="300">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000015"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M1,1 L7,4 L1,7 Z" fill="#8c959f"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="300" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="15" font-weight="700" fill="#24292f">
+    Gumbel-MCTS — Three Key Ideas (Danihelka et al., ICLR 2022)
+  </text>
+
+  <!-- ── Phase 1: Gumbel top-k ── x=14..218 -->
+  <rect x="14" y="50" width="204" height="192" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="116" y="72" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" font-weight="700" fill="#0550ae">① Gumbel top-k</text>
+  <text x="116" y="88" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" font-weight="600" fill="#57606a">action selection at root</text>
+  <line x1="34" y1="96" x2="198" y2="96" stroke="#0969da" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="116" y="114" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="10" fill="#0550ae">score = log π(a) + G(0,1)</text>
+  <text x="116" y="132" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f">G = −log(−log U), U~Uniform</text>
+  <text x="116" y="152" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">Select top-k candidates</text>
+  <text x="116" y="168" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">Default k = 16</text>
+  <line x1="34" y1="178" x2="198" y2="178" stroke="#0969da" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="116" y="195" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#2da44e">✓ Unbiased — no</text>
+  <text x="116" y="210" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#2da44e">over-exploration of</text>
+  <text x="116" y="225" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#2da44e">sub-optimal arms</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="220" y1="146" x2="236" y2="146" stroke="#8c959f" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── Phase 2: Sequential Halving ── x=238..468 -->
+  <rect x="238" y="50" width="230" height="192" rx="8" fill="#fff8c5" stroke="#9a6700" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="353" y="72" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" font-weight="700" fill="#7d4e00">② Sequential Halving</text>
+  <text x="353" y="88" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" font-weight="600" fill="#57606a">budget allocation across rounds</text>
+  <line x1="258" y1="96" x2="448" y2="96" stroke="#9a6700" stroke-width="0.5" stroke-dasharray="3,2"/>
+
+  <!-- Halving funnel bars (centered in box, max width ~160px) -->
+  <!-- Round 0: k=16 -->
+  <rect x="273" y="106" width="160" height="14" rx="3" fill="#fb8500" fill-opacity="0.9"/>
+  <text x="265" y="117" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#7d4e00">k=16</text>
+  <text x="437" y="117" text-anchor="start"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#57606a"> round 0</text>
+
+  <!-- Round 1: k=8 -->
+  <rect x="273" y="126" width="80" height="14" rx="3" fill="#fb8500" fill-opacity="0.8"/>
+  <text x="265" y="137" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#7d4e00">k=8</text>
+  <text x="357" y="137" text-anchor="start"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#57606a"> round 1</text>
+
+  <!-- Round 2: k=4 -->
+  <rect x="273" y="146" width="40" height="14" rx="3" fill="#fb8500" fill-opacity="0.7"/>
+  <text x="265" y="157" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#7d4e00">k=4</text>
+  <text x="317" y="157" text-anchor="start"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#57606a"> round 2</text>
+
+  <!-- Round 3: k=2 -->
+  <rect x="273" y="166" width="20" height="14" rx="3" fill="#fb8500" fill-opacity="0.6"/>
+  <text x="265" y="177" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#7d4e00">k=2</text>
+  <text x="297" y="177" text-anchor="start"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#57606a"> round 3</text>
+
+  <!-- Round 4: k=1 best -->
+  <rect x="273" y="186" width="10" height="14" rx="3" fill="#2da44e"/>
+  <text x="265" y="197" text-anchor="end"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#116329">k=1</text>
+  <text x="287" y="197" text-anchor="start"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="9" fill="#116329"> best action ✓</text>
+
+  <text x="353" y="224" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">log₂(k) rounds total</text>
+  <text x="353" y="237" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">Budget focused on best half</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="470" y1="146" x2="486" y2="146" stroke="#8c959f" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── Phase 3: Completed-Q ── x=488..692 -->
+  <rect x="488" y="50" width="204" height="192" rx="8" fill="#dafbe1" stroke="#2da44e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="590" y="72" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="12" font-weight="700" fill="#116329">③ Completed-Q Values</text>
+  <text x="590" y="88" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" font-weight="600" fill="#57606a">bias-corrected value estimate</text>
+  <line x1="508" y1="96" x2="672" y2="96" stroke="#2da44e" stroke-width="0.5" stroke-dasharray="3,2"/>
+
+  <text x="590" y="116" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f" font-weight="600">Visited nodes:</text>
+  <text x="590" y="131" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="10" fill="#116329">Q̃(a) = Q(a)</text>
+
+  <text x="590" y="153" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f" font-weight="600">Unvisited nodes:</text>
+  <text x="590" y="168" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="10" fill="#2da44e">Q̃(a) = vπ × scale</text>
+  <text x="590" y="183" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">vπ = prior-weighted mean</text>
+
+  <line x1="508" y1="194" x2="672" y2="194" stroke="#2da44e" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="590" y="211" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#2da44e">✓ No deep rollouts needed</text>
+  <text x="590" y="225" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#2da44e">for unvisited actions</text>
+
+  <!-- Arrow 3→result -->
+  <line x1="694" y1="146" x2="710" y2="146" stroke="#8c959f" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ── Result ── x=712..844 -->
+  <rect x="712" y="74" width="132" height="144" rx="8" fill="#ffffff" stroke="#2da44e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="778" y="97" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="700" fill="#24292f">Result</text>
+  <line x1="728" y1="105" x2="828" y2="105" stroke="#d0d7de" stroke-width="1"/>
+  <text x="778" y="126" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="26" font-weight="800" fill="#2da44e">~10×</text>
+  <text x="778" y="144" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" font-weight="600" fill="#24292f">speedup</text>
+  <text x="778" y="160" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">vs vanilla UCT</text>
+  <line x1="728" y1="170" x2="828" y2="170" stroke="#d0d7de" stroke-width="1"/>
+  <text x="778" y="186" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">same or better</text>
+  <text x="778" y="200" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">search quality</text>
+
+  <!-- Footer citation -->
+  <text x="430" y="272" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#8c959f" font-style="italic">
+    Based on: "Policy improvement by planning with Gumbel" — Danihelka et al., ICLR 2022
+  </text>
+  <text x="430" y="286" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#8c959f">
+    Pure Python · NumPy only · no GPU required
+  </text>
+</svg>

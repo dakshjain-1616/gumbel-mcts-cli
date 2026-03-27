@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" width="860" height="300">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000015"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="300" rx="12" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
+        font-size="15" font-weight="700" fill="#24292f">
+    Built-in Benchmark Environments
+  </text>
+  <text x="430" y="46" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="11" fill="#57606a">
+    Each environment is reproducible (seeded), cloneable, and works with both Gumbel-MCTS and Vanilla MCTS
+  </text>
+
+  <!-- ── GridWorld ── x=16..282 -->
+  <rect x="16" y="60" width="266" height="220" rx="10" fill="#ffffff" stroke="#0969da" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Header -->
+  <rect x="16" y="60" width="266" height="38" rx="10" fill="#ddf4ff"/>
+  <rect x="16" y="84" width="266" height="14" fill="#ddf4ff"/>
+  <text x="149" y="84" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="700" fill="#0550ae">🗺  GridWorldEnv</text>
+
+  <!-- Mini grid (4x4 representative) -->
+  <!-- Grid at x=76, y=108, cell=18px -->
+  <rect x="72" y="104" width="18" height="18" rx="2" fill="#2da44e" fill-opacity="0.8"/>
+  <text x="81" y="117" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff">S</text>
+  <rect x="90" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="108" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="126" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="144" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="162" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="180" y="104" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="72" y="122" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="90" y="122" width="18" height="18" rx="2" fill="#30363d"/>
+  <rect x="108" y="122" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="126" y="122" width="18" height="18" rx="2" fill="#30363d"/>
+  <rect x="144" y="122" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="162" y="122" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="180" y="122" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="72" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="90" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="108" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="126" y="140" width="18" height="18" rx="2" fill="#30363d"/>
+  <rect x="144" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="162" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="180" y="140" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="72" y="158" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="90" y="158" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="108" y="158" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="126" y="158" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="144" y="158" width="18" height="18" rx="2" fill="#f0f0f0" stroke="#e0e0e0" stroke-width="0.5"/>
+  <rect x="162" y="158" width="18" height="18" rx="2" fill="#30363d"/>
+  <rect x="180" y="158" width="18" height="18" rx="2" fill="#fb8500"/>
+  <text x="189" y="171" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff">G</text>
+  <!-- Labels -->
+  <text x="81" y="97" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">(0,0)</text>
+  <text x="189" y="97" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">(N-1,N-1)</text>
+
+  <line x1="36" y1="184" x2="266" y2="184" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="149" y="201" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f">NxN grid · default 8×8</text>
+  <text x="149" y="216" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">4 actions: ↑ ↓ ← →</text>
+  <text x="149" y="231" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">+1 at goal · −0.01/step</text>
+  <text x="149" y="246" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">−0.1 wall penalty</text>
+  <text x="149" y="264" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#0969da">optional obstacle_density</text>
+  <text x="149" y="274" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="8" fill="#8c959f">env: GRID_SIZE · MAX_STEPS</text>
+
+  <!-- ── MaxTree ── x=297..563 -->
+  <rect x="297" y="60" width="266" height="220" rx="10" fill="#ffffff" stroke="#bc4c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="297" y="60" width="266" height="38" rx="10" fill="#fff1e5"/>
+  <rect x="297" y="84" width="266" height="14" fill="#fff1e5"/>
+  <text x="430" y="84" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="700" fill="#7d2d00">🌳 MaxTreeEnv</text>
+
+  <!-- Tree visualization (depth=3 representative) -->
+  <!-- Root -->
+  <circle cx="430" cy="112" r="8" fill="#bc4c00"/>
+  <!-- Level 1 -->
+  <line x1="424" y1="118" x2="394" y2="134" stroke="#bc4c00" stroke-width="1.5"/>
+  <line x1="436" y1="118" x2="466" y2="134" stroke="#bc4c00" stroke-width="1.5"/>
+  <circle cx="390" cy="138" r="7" fill="#e36209"/>
+  <circle cx="470" cy="138" r="7" fill="#e36209"/>
+  <!-- Level 2 left subtree -->
+  <line x1="384" y1="143" x2="362" y2="158" stroke="#e36209" stroke-width="1.5"/>
+  <line x1="396" y1="143" x2="418" y2="158" stroke="#e36209" stroke-width="1.5"/>
+  <!-- Level 2 right subtree -->
+  <line x1="464" y1="143" x2="442" y2="158" stroke="#e36209" stroke-width="1.5"/>
+  <line x1="476" y1="143" x2="498" y2="158" stroke="#e36209" stroke-width="1.5"/>
+  <!-- Leaves -->
+  <rect x="353" y="158" width="18" height="12" rx="3" fill="#f0f0f0" stroke="#8c959f" stroke-width="1"/>
+  <text x="362" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">0.3</text>
+  <rect x="409" y="158" width="18" height="12" rx="3" fill="#2da44e"/>
+  <text x="418" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#fff">1.9</text>
+  <rect x="433" y="158" width="18" height="12" rx="3" fill="#f0f0f0" stroke="#8c959f" stroke-width="1"/>
+  <text x="442" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">0.7</text>
+  <rect x="489" y="158" width="18" height="12" rx="3" fill="#f0f0f0" stroke="#8c959f" stroke-width="1"/>
+  <text x="498" y="168" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">−0.4</text>
+  <text x="430" y="186" text-anchor="middle" font-family="monospace" font-size="8" fill="#2da44e">↑ optimal</text>
+
+  <line x1="317" y1="194" x2="547" y2="194" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="430" y="211" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f">depth=6 · branching=8</text>
+  <text x="430" y="226" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">8⁶ = 262,144 possible leaves</text>
+  <text x="430" y="241" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">Find max-value leaf path</text>
+  <text x="430" y="256" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#bc4c00">Canonical Gumbel benchmark</text>
+  <text x="430" y="274" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="8" fill="#8c959f">env: TREE_DEPTH · TREE_BRANCHING</text>
+
+  <!-- ── SequenceEnv ── x=578..844 -->
+  <rect x="578" y="60" width="266" height="220" rx="10" fill="#ffffff" stroke="#6e40c9" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="578" y="60" width="266" height="38" rx="10" fill="#f5f0ff"/>
+  <rect x="578" y="84" width="266" height="14" fill="#f5f0ff"/>
+  <text x="711" y="84" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="14" font-weight="700" fill="#4f2d99">🔤 SequenceEnv</text>
+
+  <!-- Sequence visualization -->
+  <!-- Token positions 0..4 -->
+  <rect x="608" y="104" width="28" height="28" rx="4" fill="#f5f0ff" stroke="#6e40c9" stroke-width="1.5"/>
+  <text x="622" y="122" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#4f2d99">3</text>
+  <text x="622" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">pos 0</text>
+
+  <rect x="644" y="104" width="28" height="28" rx="4" fill="#f5f0ff" stroke="#6e40c9" stroke-width="1.5"/>
+  <text x="658" y="122" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#4f2d99">7</text>
+  <text x="658" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">pos 1</text>
+
+  <rect x="680" y="104" width="28" height="28" rx="4" fill="#2da44e"/>
+  <text x="694" y="122" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#fff">1</text>
+  <text x="694" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#2da44e" font-weight="600">best</text>
+
+  <rect x="716" y="104" width="28" height="28" rx="4" fill="#f5f0ff" stroke="#6e40c9" stroke-width="1.5"/>
+  <text x="730" y="122" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#4f2d99">5</text>
+  <text x="730" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">pos 3</text>
+
+  <rect x="752" y="104" width="28" height="28" rx="4" fill="#f5f0ff" stroke="#6e40c9" stroke-width="1.5"/>
+  <text x="766" y="122" text-anchor="middle" font-family="monospace" font-size="11" font-weight="700" fill="#4f2d99">2</text>
+  <text x="766" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#57606a">pos 4</text>
+
+  <!-- Score bar -->
+  <text x="711" y="150" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="10" fill="#57606a">score = Σ embed[pos, tok]</text>
+  <text x="711" y="165" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',monospace"
+        font-size="10" fill="#4f2d99">optimal ≈ Σ max(embed[pos])</text>
+
+  <line x1="598" y1="178" x2="828" y2="178" stroke="#e8e8e8" stroke-width="1"/>
+  <text x="711" y="196" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#24292f">vocab=8 · depth=5 steps</text>
+  <text x="711" y="211" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">8⁵ = 32,768 sequences</text>
+  <text x="711" y="226" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#57606a">Custom score_fn supported</text>
+  <text x="711" y="241" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="10" fill="#6e40c9">Models: codegen · mol. design</text>
+  <text x="711" y="274" text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+        font-size="8" fill="#8c959f">env: SEQ_VOCAB_SIZE · SEQ_DEPTH</text>
+</svg>
